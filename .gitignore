@@ -456,3 +456,6 @@ PulumiInstaller.wxs
 !.vscode/extensions.json
 manifest.yaml
 .ionide
+
+# Downloaded packages
+packages/

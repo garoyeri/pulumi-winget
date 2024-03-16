@@ -1,0 +1,26 @@
+﻿<Project Sdk="WixToolset.Sdk/4.0.4">
+	<PropertyGroup>
+		<OutputName>pulumi-$(Version)-windows-$(InstallerPlatform).msi</OutputName>
+		<DefineConstants>
+			ProductVersion=$(Version)
+		</DefineConstants>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<HarvestDirectory Include="../../packages/$(InstallerPlatform)/">
+			<ComponentGroupName>PulumiBinaries</ComponentGroupName>
+			<DirectoryRefId>INSTALLFOLDER</DirectoryRefId>
+			<SuppressRootDirectory>true</SuppressRootDirectory>
+			<SuppressCom>true</SuppressCom>
+			<SuppressRegistry>true</SuppressRegistry>
+			<Transforms>add-checksum.xsl</Transforms>
+		</HarvestDirectory>
+		
+		<BindPath Include="../../packages/$(InstallerPlatform)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="WixToolset.Heat" Version="4.0.4" />
+		<PackageReference Include="WixToolset.Util.wixext" Version="4.0.4" />
+	</ItemGroup>
+</Project>
