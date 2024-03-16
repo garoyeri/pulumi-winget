@@ -1,6 +1,6 @@
 ﻿<Project Sdk="WixToolset.Sdk/4.0.4">
 	<PropertyGroup>
-		<OutputName>pulumi-$(Version)-windows-$(InstallerPlatform).msi</OutputName>
+		<OutputName>pulumi-$(Version)-windows-$(Platform.ToLower())</OutputName>
 		<DefineConstants>
 			ProductVersion=$(Version)
 		</DefineConstants>
