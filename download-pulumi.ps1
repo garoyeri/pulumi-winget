@@ -1,12 +1,12 @@
 param (
-  [string]$version = "v3.111.0",
+  [string]$version = "3.111.0",
   [string]$arch = "x64",
   [bool]$clean = $false,
   [string]$pat
 )
 
 # Define the URL for the release of Pulumi from GitHub API
-$url = "https://api.github.com/repos/pulumi/pulumi/releases/tags/$version"
+$url = "https://api.github.com/repos/pulumi/pulumi/releases/tags/v$version"
 
 # Create a header for the PAT if one was provided
 $headers = @{
