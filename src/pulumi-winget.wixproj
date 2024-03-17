@@ -7,7 +7,7 @@
 	</PropertyGroup>
 	
 	<ItemGroup>
-		<HarvestDirectory Include="../../packages/$(InstallerPlatform)/">
+		<HarvestDirectory Include="../packages/$(InstallerPlatform)/">
 			<ComponentGroupName>PulumiBinaries</ComponentGroupName>
 			<DirectoryRefId>INSTALLFOLDER</DirectoryRefId>
 			<SuppressRootDirectory>true</SuppressRootDirectory>
@@ -16,7 +16,7 @@
 			<Transforms>add-checksum.xsl</Transforms>
 		</HarvestDirectory>
 		
-		<BindPath Include="../../packages/$(InstallerPlatform)" />
+		<BindPath Include="../packages/$(InstallerPlatform)" />
 	</ItemGroup>
 
 	<ItemGroup>
